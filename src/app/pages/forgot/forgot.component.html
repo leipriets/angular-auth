@@ -1,0 +1,21 @@
+<div class="text-center">
+  <main class="form-signin w-100 m-auto">
+    <form [formGroup]="form" (submit)="submit()">
+
+      <div *ngIf="class" class="alert alert-{{class}}" role="alert">
+        {{ message }}
+      </div>
+
+      <h1 class="h3 mb-3 fw-normal">Please set your email</h1>
+
+      <div class="form-floating">
+        <input formControlName="email" type="email" class="form-control">
+        <label>Email</label>
+      </div>
+
+      <div class="mt-3">
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</div>
